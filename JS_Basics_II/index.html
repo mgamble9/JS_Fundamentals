@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS Basics II</title>
+    <script type="text/javascript">
+    function magic_multiply(x, y){
+      if (isNaN(x)){
+        if (typeof x === 'string'){
+          x = x.repeat(y);
+        }
+        else {
+          for (let i=0; i<x.length; i++) {
+            x[i]*=y;
+          }
+        }
+      }
+      else {
+        x*=y;
+      }
+      return x;
+    }
+
+    console.log(magic_multiply(5,2));
+    console.log(magic_multiply(0,0));
+    console.log(magic_multiply([1,2,3],2));
+    console.log(magic_multiply(7,"three"));
+    console.log(magic_multiply("Brendo",4));
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

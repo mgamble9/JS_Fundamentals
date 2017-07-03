@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS Intermediate</title>
+    <script type="text/javascript">
+
+      function star_string(n,string_char) {
+        let str_out = string_char;
+        return str_out.repeat(n);
+      }
+      console.log(star_string(9,"*"));
+
+      function draw_stars(arr) {
+        for (let i=0; i<arr.length; i++) {
+          if (typeof arr[i] === 'string') {
+            let str_out = arr[i][0].toLowerCase();
+            console.log(star_string(arr[i].length,str_out));
+          }
+          else {
+            console.log(star_string(arr[i],"*"));
+          }
+        }
+      }
+      draw_stars([1,2,3,4,5]);
+      draw_stars([4, "Tom", 1, "Michael", 5, 7, "Jimmy Smith"]);
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
